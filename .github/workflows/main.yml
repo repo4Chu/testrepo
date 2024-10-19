@@ -1,0 +1,17 @@
+name: Run ID Command
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  execute-id:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the code
+      uses: actions/checkout@v2
+
+    - name: Execute id command
+      run: id
